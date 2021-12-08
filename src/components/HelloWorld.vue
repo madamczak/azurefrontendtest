@@ -27,15 +27,33 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+
+    <button @click="change_message">Get info from backend</button><br>
+    <label>{{message}}</label>
   </div>
 </template>
 
 <script>
+// import func from 'vue-editor-bridge'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+
+  data: function(){
+    return {
+      message: "MESSAGE"
+    }
+  },
+
+  methods: {
+    change_message: function(){
+      this.message = "AAAAA"
+    }
   }
+
+
 }
 </script>
 
